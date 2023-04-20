@@ -7,28 +7,62 @@
     tools:context=".MainScreen">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/ed_mobile_number"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:padding="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:inputType="number"
         android:maxLength="10"
-        android:text="8128618176"
+        android:background="@drawable/editext_bg"
         android:hint="Enter Your Mobile Number"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/ed_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="40dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/editext_bg"
+        android:hint="Enter Your Email Id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_mobile_number" />
+    <EditText
+        android:id="@+id/ed_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="40dp"
+        android:inputType="textPassword"
+        android:background="@drawable/editext_bg"
+        android:hint="Enter Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/ed_email" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/createUserAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/editext_bg"
+        android:backgroundTint="#4CAF50"
+        android:padding="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Create Account"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        android:fontFamily="@font/poppins"
+        android:textFontWeight="600"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_password" />
 </androidx.constraintlayout.widget.ConstraintLayout>

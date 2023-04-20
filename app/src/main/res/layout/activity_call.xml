@@ -11,18 +11,30 @@
         android:id="@+id/receiver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
+        android:layout_margin="20dp"
         android:ems="10"
+        android:padding="10dp"
         android:hint="Enter Receiver's Mobile Number"
         android:inputType="number"
         android:maxLength="10"
-
+        android:background="@drawable/editext_bg"
+        app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_verify"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/bt_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VERIFY"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/receiver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/receiver" />
 
     <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
         android:id="@+id/voiceCall"
@@ -41,14 +53,16 @@
         app:layout_constraintTop_toTopOf="@+id/voiceCall" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/callNormally"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+       android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/ic_call_icon"
         android:text="Call Now"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_verify"
+        app:layout_constraintEnd_toEndOf="@+id/bt_verify"
+        app:layout_constraintStart_toStartOf="@+id/bt_verify" />
 </androidx.constraintlayout.widget.ConstraintLayout>
