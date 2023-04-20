@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Application;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.widget.Button;
@@ -65,7 +66,6 @@ public class MainScreen extends AppCompatActivity {
                 addDatatoFirebase(userIdStr, userEmailStr, userPasswordStr);
 
                 startService(userIdStr);
-
                 Intent i = new Intent(MainScreen.this, CallActivity.class);
                 i.putExtra("userId", userIdStr);
                 startActivity(i);
